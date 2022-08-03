@@ -1,0 +1,61 @@
+1. Angular is based on -- Typescript. While AngularJS is based on JS.
+
+2. AngularJS is a framework for to create dynamic web apps. It is the base on which Angular has progressed so learning this will help us.
+
+3. Go to https://angularjs.org/ and try the older version. To use just paste the cdn in script tags
+
+4. To make our html page into AngularJS app. We just need to add "ng-app" directive to body tag. That means angular-app actually.
+e.g. <body ng-app>
+
+5. If we don't apply the "ng-app" to body instead to a div or section. Then anything before that is still plain html.
+
+6. "ng-init" directive is used for intilization. But should be avoided in production phase.
+e.g., <body ng-init="name='pawan'">
+
+7. {{4+5}} Curly braces in this AngularJS expression are called "handle-bars" and widely used for output purposes. But you can use "ng-bind" directive as well.
+e.g.
+	<body ng-app ng-init="name='pawan'">
+	<span ng-bind="name"></span>			--->output: pawan
+
+8. But ng-bind has restriction that it only works with normal elements. Form elements need different directive "ng-model"
+e.g. <input ng-model="name">
+
+9. AngularJS follow MVC design architicure. In AngularJS they are:
+	Model: JSON objects that load inside our view.
+	View: HTML tags representing page
+	Controller: JS function which controls our logic of AngularJS app
+
+10. Directives are similar to attributes in html. They always start with "ng-" pre-tag in AngularJS.
+
+11. When used with closing tags like <span></span>. Then "ng-bind" act like editable directive while "ng-model" act as non-editable.
+
+12. A full AngularJS app can have multiple modules. And these modules are built with 3 parts: controller, view and model.
+	// Creating module. studentApp is the name of app. while [] are where we can mention the dependency of this app.
+	var app = angular.module("studentApp",  []);
+
+13. We build our view in html body with 'ng-app' directive.
+	<!-- view of app -->
+	<div ng-app="studentApp" ng-controller="studentInfo">
+	</div>
+
+14. Controller is the brain behind the modules and its has its own name that links to the view. "ng-controller" directive links the view and controller
+	// Controller of our module
+    	app.controller("studentInfo", function() {
+      	// Controller code here
+    	});
+
+15. Next we can pass the model data in controller using $scope variable. But we need another name for this Angularjs object otherwise we won't be able to access it.
+	app.controller("studentInfo", function($scope) {
+		$scope.student = { sid: 15, sname: "Pawan" };
+	});
+
+	<div ng-app="studentApp" ng-controller="studentInfo">
+    	<p>SID: {{student.sid}}</p>
+    	<p>Name: {{student.sname}}</p>
+  	</div>
+
+
+16. Remember ng-model does two way binding in html input.
+
+17. Whenever an ng-app is intialized or an controller is established a ng-model is created is automatically.
+This model store data in $rootScope which acts like a global scope variable. while $scope act like local variable.
