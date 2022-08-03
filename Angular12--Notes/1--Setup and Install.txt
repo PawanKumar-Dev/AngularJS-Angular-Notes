@@ -1,0 +1,20 @@
+1. Angular 12 is updated version that is developed ever since changes from AG2.
+
+2. You need NodeJS and Angular CLI(this helps code faster).
+
+3. For Angluar Cli go to https://angular.io/cli and install CLI:
+  npm install -g @angular/cli
+
+4. Check AngularVersion with:
+  ng version
+
+5. Make new AG project:
+  ng new my-first-project
+
+6. Install older version of Angular CLI and angular:
+  npm install -g @angular/cli@12.0.0
+
+7. Can even install different version of NodeJS by using "NVM - Node Version Manager".
+
+8. Launch your AJ project:
+  ng serve 

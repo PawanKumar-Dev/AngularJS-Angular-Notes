@@ -1,0 +1,31 @@
+1. app.component.html is the main file that rendering our default page. You can edit with simple html.
+
+2. Interpolation: It the way we access/show dynamic data on the html part. It happens with syntax {{}}.
+
+3. This "dynamic data" is get from "__.component.ts" file. Where we write our logic in TS(typescript). Its called dynamic becoz it can be generated in .ts file, or come from another component or an API.
+
+4. This data can be variable, functions etc(all passed in typescript format). 
+  ...
+    export class AppComponent {
+    title = 'myblog';
+    hey = 'Pawan';
+    greet() {
+      return "Hey Pawan this is a function";
+    }
+  }
+
+  ...
+    <h2>{{hey}}</h2>
+    <h3>{{greet()}}</h3>
+
+5. What we can do with Interpolation:
+  - we can match/compare values.
+  - can do calculation with maths expression
+  - run functions
+  - run loops
+  - almost all things we can do with Vanilla JS
+
+6. What we can't do with Interpolation:
+  - {{hey = raju}} cannot happen. Result error. Meaning we cannot assign value to variables in Interpolation
+  - cannot check typeof variable like in normal JS
+  - cannot use increment(++) or decrement(--) operator
