@@ -1,0 +1,28 @@
+1. One way to take input and show it to your html view is through standard way:
+  - ...
+    <input type="text" #textbox (keyup)="showText(textbox.value)" placeholder="Enter Text">
+    <h4>{{displayText}}</h4>
+
+  - ...
+    displayText :string = '';
+
+    showText(text :string) {
+      this.displayText = text;
+    }
+
+2. In this way we pass our data via function and hold it in a variable which is printed on view.
+
+3. Similarly you can hold these value in variable and show it only on "btn click". That can be done by simply changing our event.
+  - ...
+    <input type="text" #textbox placeholder="Enter Text">
+    <button (click)="showText(textbox.value)">Display Data</button>
+    <h4>{{displayText}}</h4>
+
+  - Logic part remain same as above.
+
+4. Finally there is "ng-model" way which allow the "two-way binding". Refer future notes.
+
+5. By changing "value" to any other attribute of html element. You can get their info too. Like placeholders, name, class etc.
+  - ...
+    <input type="text" #textbox placeholder="Enter Text">
+    <button (click)="showText(textbox.placeholder)">Display Data</button>

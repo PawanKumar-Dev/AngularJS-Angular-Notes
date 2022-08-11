@@ -1,0 +1,15 @@
+1. Component is fundamental building block of AJ. It contains:
+  - HTML file: which contains the HTML view part
+  - CSS file containing CSS style of that component
+  - Typescript file which holds all the logic 
+  - Testing spec typescript file for testing purposes.
+
+2. You can generate Components with CLI command:
+  -- ng generate component 'component-name'
+
+3. Whenever a new component is generated, its code is automaticlly imported in "app.module.ts" file. And registered as component. Without this you can't access/use your component.
+
+4. When you want to publish your component to your app. You need to know about your "selector" and put it in the main "app.component.html". We just use it as a html tag.
+  <component-selector></component-selector>
+
+5. You can change your component name and thus your selector name by editing that component ".ts" file.

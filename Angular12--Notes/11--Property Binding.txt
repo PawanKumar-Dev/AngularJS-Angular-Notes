@@ -1,0 +1,27 @@
+1. Property Binding is like Interpolation in the sense that it allows us to display dynamic data on the view of AJ app. But their can be certain key difference as well.
+
+2. Property Binding is mostly used for dynamically changing the values in html attributes and properties. Like in Input html:
+
+  // While using Interpolation
+  - <input type="text" name="username" value="{{usernameValue}}">
+
+  // While using Property Binding
+  - <input type="text" name="username2" [value]="usernameValue">
+
+
+3. Advantage of using Property Binding is it allows to pass even "boolean" values. While Interpolation is restricted to string and numeric only.
+
+4. This difference can be understood by this example
+  - ...
+    IsDisable = true;
+
+    ...
+    <input type="text" name="username" disabled="{{IsDisable}}">
+
+    <input type="text" name="username2" [disabled]="IsDisable">
+
+5. When we keep "IsDisable" variable 'true'. Both our inputs are disabled as expected. But when we make it 'false', things go weird.
+
+6. Because Interpolation doesn't interpret boolean, our first input remains disabled. While our 2nd input get activated as expected.
+
+7. For this key reason, when using html attributes dynamically like disabled, hidden, visibility -- then using Property Binding is much safer and correct.

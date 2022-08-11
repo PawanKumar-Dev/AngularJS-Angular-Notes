@@ -1,0 +1,22 @@
+1. We can all events of JS in AJ. But syntax is different. We use the "banana bracket style".
+  - <button (click)="getName()">Click Me</button>
+
+2. Remember all logic is defined inside our ".ts" file for these events.
+
+3. Similarly you can use these events in input tags too. Like 'blur', 'keydown' etc. All events names are smallcap in AJ.
+  - <input type="text" (keydown)="printText()" placeholder="Enter Text here...">
+
+  - ...
+    printText() {
+      console.log("You are typing...");
+    }
+
+4. You can even pass data from input field to the function, using an "id"
+  - <input type="text" #entrTxt (keydown)="printText(entrTxt.value)" placeholder="Enter Text here...">
+
+  - ...
+    printText(entrTxt: string) {
+      console.log(entrTxt);
+    }
+
+5. Similarly you can use any JS event.

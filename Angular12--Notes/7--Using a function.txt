@@ -1,0 +1,25 @@
+1. Functions works pretty much same as JS except we need to remember that Typescript use the OOP approach and most of your functions will be inside a "class".
+
+2. Easiest way to do this is to write your function in ".ts" file and access it in html view.
+  ...
+  getName() {
+    alert("Pawan");    
+  }
+
+  ...
+  <button (click)="getName()">Click Me</button>
+
+3. Our event handler "click" is written inside parenthsis called "Banana Bracket".
+
+4. When passing parameter in functions, we need to remember that Typescript from AJ12 onward has configration set for "strict mode" activated in tsconfig.ts file.
+
+5. So we need to define what "data type" of argument we are recieveing.
+  ...
+  getName(name:string) {
+    alert("Pawan");    
+  }
+
+  ...
+  <button (click)="getName('Raju')">Click Me</button>
+
+6. You can also use the "any" type to temprory bypass strict mode of Typescript.

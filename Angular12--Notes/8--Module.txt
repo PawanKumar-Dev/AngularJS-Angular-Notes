@@ -1,0 +1,35 @@
+1. Modules are fully functional units containing different components. They are next stage in AJ folder structure after component. They make AJ code more modular.
+
+2. A typical Module contains components, services and pips(also called pipes). A Module can many or very few of them their is no limit.
+
+3. Generate module:
+  - ng generate module 'module-name'
+
+4. While components are reusable in nature. Modules can be harder to reuse.
+
+5. To make components inside your module, we do:
+  - ng generate component 'module-name'/'component-name'
+
+6. Now when you want to use this component in view of app. We can't do the usual:
+  <component-name></component-name>   ---> gives us error
+
+7. To make it work, first we register this component in our module ts file. And export it
+  ...
+    imports: [
+      CommonModule
+    ],
+    exports: [
+      SignInComponent       ---> We need to export our component
+    ]
+  })
+  export class UserAuthModule { }
+
+8. After this go to you main module file -- "app.module.ts" and register your module where your component resides.
+
+  - import { UserAuthModule } from './user-auth/user-auth.module';
+
+  - ...
+      imports: [
+        BrowserModule,
+        UserAuthModule    --> Here we are importing our custom module
+      ],

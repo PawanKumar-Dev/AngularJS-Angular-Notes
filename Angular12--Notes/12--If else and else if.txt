@@ -1,0 +1,51 @@
+1. Like JS we can use power of if else condition statement to make certain decisions.
+
+2. You can use if condition on any html element with "*ngIf" attribute
+  - ...
+  <h3 *ngIf="show">
+    If statement is true hence this thing showing up
+  </h3>
+
+  - ...
+    show : boolean = false;
+
+3. So when our boolean variable is true, our <h3> get displayed as expected and when false it disappears.
+
+4. For else part we have to use the ng-template option. Here we pass an if "#elseBlock" and then this id is referenced by else in top if statement.
+  - ...
+    <h3 *ngIf="show else elseBlock">
+      If statement is true hence this thing showing up
+    </h3>
+
+    <ng-template #elseBlock>
+      <h3>Else statement works...</h3>
+    </ng-template>
+
+5. We can use ng-template for writing "if condition" as well.
+  - ...
+  <h3 *ngIf="show; then ifBlock else elseBlock"></h3>
+
+  <ng-template #ifBlock>
+    <h3>If statement works...</h3>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <h3>Else statement works...</h3>
+  </ng-template>
+
+6. In AJ there is no "elseif". To check multiple conditions we either use multiple "[ngIf]" or we use switch statement if conditions are more then 3 or 4.
+  - ...
+  color: string = "orange";
+
+  - ...
+  <ng-template [ngIf]="color=='blue'">
+    <h4 style="color:blue">Blue Color</h4>
+  </ng-template>
+
+  <ng-template [ngIf]="color=='red'">
+    <h4 style="color:red">Red Color</h4>
+  </ng-template>
+
+  <ng-template [ngIf]="color=='orange'">
+    <h4 style="color:orange">Orange Color</h4>
+  </ng-template>

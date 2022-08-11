@@ -1,0 +1,27 @@
+1. Angular CLI commands make our work easier and faster. Here some important CLI commands that need to be remembered: 
+
+2. Creating component(use without quote):
+  -- ng generate component 'component-name-here'
+
+  short version:
+  -- ng g c 'component-name-here' 
+
+3. All these components are generated directly inside the src/app folder.
+
+4. Creating Modules(They are folder/collections which comprise of many smaller components together).
+  -- ng g m 'module-name'
+
+5. To make a component inside the module we do this cmd:
+  -- ng g c 'module-name'/'component-name'
+
+
+6. To make a class:
+  -- ng generate class 'class-name'
+
+7. To make a interface:
+  -- ng generate interface 'interface-name'
+
+8. To build final files:
+  -- ng build
+
+9. This build cmd generate a dist folder, which is then deployed for live app

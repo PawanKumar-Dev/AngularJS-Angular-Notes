@@ -1,0 +1,16 @@
+1. Typically component has 4 types of files in it. But we can minimize them according our need.
+
+2. Inline Style: As guessed, remove our css file and allow us to add css part directly inside the "component.ts" file.
+
+3. We can generate inline style component:
+  - ng generate component 'component-name' --inline-style
+
+4. Inline Template: removes our Html file and allow us to directly write html part in Typescript file.
+  - ng generate component 'component-name' --inline-template
+
+
+5. We can even combine inline-style and inline-template to generate fewest file possible. Meaning we get only two file and our HTML and CSS is inline written in ".ts file" directly.
+
+Note: Just like normal HTML, CSS priroty is decided based on where the CSS styles are written. In normal component:
+
+  Inline-CSS-Style > Internal Style > Component CSS style > Global CSS style

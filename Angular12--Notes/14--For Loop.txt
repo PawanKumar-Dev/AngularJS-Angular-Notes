@@ -1,0 +1,17 @@
+1. For loop in Aj is different from normal JS.
+  - ...
+  students = ["Pawan", "Raju", "Pankaj", "Ashish"];
+
+  - ...
+  <h4 *ngFor="let item of students">{{item}}</h4>
+
+2. But what if you want to pack more data in array, then we use Object and access them using "dot" notation.
+  - ...
+  studentDetails = [
+    {name: 'Pawan', email: 'pawan@gmail.com', phone: '8821'},
+    {name: 'Raju', email: 'raju@gmail.com', phone: '1234'},
+    {name: 'Pankaj', email: 'pankaj@gmail.com', phone: '8642'}
+  ];
+
+  - ...
+  <h5 *ngFor="let item of studentDetails">Name: {{item.name}} -- Email-id: {{item.email}}</h5>

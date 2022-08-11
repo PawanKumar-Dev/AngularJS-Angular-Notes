@@ -1,0 +1,16 @@
+1. When you have a situation where you need to test your condition multiple times, i.e. more than 3-4 times then you cannot use [ngIf].
+
+2. Switch statement is designed to handle these situations:
+  - ...
+  color: string = "purple";
+
+  - ...
+  <div [ngSwitch]="color">
+    <h2 *ngSwitchCase="'red'" style="color: red;">Red Color</h2>
+    <h2 *ngSwitchCase="'blue'" style="color: blue;">Blue Color</h2>
+    <h2 *ngSwitchCase="'green'" style="color: green;">Green Color</h2>
+    <h2 *ngSwitchCase="'orange'" style="color: orange;">Orange Color</h2>
+    <h2 *ngSwitchDefault>Unknown Color</h2>
+  </div>
+
+3. Normal cases are matched against our condition. But if none of them matches we can defer to a default case in Switch Statement.
