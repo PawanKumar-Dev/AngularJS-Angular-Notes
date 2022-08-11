@@ -1,0 +1,22 @@
+1. When dynamic styling, we use static binding in AJ.
+  - ...
+  <h2 [style.color]="myColor">This element is colored</h2>
+
+  - ...
+  myColor: string = "green";
+
+2. Now we can make it truly dynamic using this with a button
+  - ...
+  <h2 [style.color]="myColor" [style.backgroundColor]="myBgColor">This element is colored</h2>
+  <button (click)="changeColor()">Change color</button>
+
+  - ...
+  myColor: string = "green";
+  myBgColor: string = "yellow";
+
+  changeColor() {
+    this.myColor = "red";
+    this.myBgColor = "blue";
+  }
+
+3. So we can change these styles because of static binding. We can even apply multiple of these static binding. And change them dynamically.

@@ -1,0 +1,16 @@
+1. In situation where our info is nested in multi-dimensional array or nested objects, we must use nested "for" loop to access them.
+  - ...
+  studentDetails = [
+    {name: 'Pawan', phone: '8821', socialAccounts: ['Facebook', 'LinkedIn', 'Twitter']},
+    {name: 'Raju', phone: '1234', socialAccounts: ['Google+', 'Fiverr', 'Kuku']},
+    {name: 'Pankaj', phone: '8642', socialAccounts: ['Twitter', 'Instagram', 'Tiktok']}
+  ];
+
+  - ...
+  <ul *ngFor="let sd of studentDetails">
+    <li>Name: {{sd.name}}</li>
+    <li>Phone: {{sd.phone}}</li>
+    <ul *ngFor="let sa of sd.socialAccounts">
+      <li>{{sa}}</li>
+    </ul>
+  </ul>

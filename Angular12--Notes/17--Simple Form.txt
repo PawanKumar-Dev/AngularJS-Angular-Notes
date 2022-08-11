@@ -1,0 +1,40 @@
+1. In AJ there can be many different type of forms. But lets learn a simple form and understand the basic flow.
+
+2. First before start using the form, we must import the "FormsModule" in our module.ts file.
+  - ...
+  import { FormsModule } from '@angular/forms';
+
+  - ...
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+
+3. Remember the "FormsModule" must be imported before we can use the form.
+
+4. Next we build the simple html format of our form:
+  - ...
+  <form #myForm="ngForm" (ngSubmit)="getData(myForm.value)">
+    <input type="text" name="user" placeholder="Enter Your Name..." ngModel>
+    <br><br>
+    <input type="text" name="email" placeholder="Enter Your Email-id..." ngModel>
+    <br><br>
+    <button>Register</button>
+  </form>
+
+5. As you can see, we have to pass an id. #myForm="ngForm" -- this identify our form.
+
+6. Next part (ngSubmit)="getData(myForm.value) is event which takes an id and let determine which form attribute we want to target. Like we wanted the "value".
+
+7. All input element must have 'ngModel' and 'name' attribute to be able to fetch data.
+
+8. Next we go to our logic part:
+  -...
+  import {NgForm} from '@angular/forms';
+
+  -...
+  getData(data: NgForm) {
+    console.log(data);
+  }
+
+9. Next we import NgForm to let our function know which type form data we are getting. You can do it with "any" as well.
