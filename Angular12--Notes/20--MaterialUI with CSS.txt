@@ -1,0 +1,20 @@
+1. Material UI is  mobile first responsive framework/library. Just like Bootstrap. You can find its guide here: https://material.angular.io/
+
+2. Next we type install cmd:
+  - ng add @angular/material
+
+3. Now to use any btn, slider or any other component style of MatUI. We first import the module in "app.module.ts" or module.ts file. Then mention it in imports and then only we can use them properly.
+  - ...
+  import {MatButtonModule} from '@angular/material/button';
+
+  - ...
+  imports: [
+    BrowserModule,
+    MatButtonModule
+  ],
+
+4. After that we use the html part of MatUI:
+  - ...
+  <button mat-raised-button color="accent">Accent</button>
+
+5. Remember since MatUI put a lot of css and html part in designing. It will slow down your AJ app. So only import and use those component that you need.

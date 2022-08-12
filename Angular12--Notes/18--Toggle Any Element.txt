@@ -1,0 +1,16 @@
+1. You can easily toggle any element in AJ with help of simple "*ngif" and a function.
+  - ...
+  <button (click)="toggle()">Click to Toggle</button>
+
+  <div *ngIf="display">
+    <h2>This element is being toggled by button</h2>
+  </div>
+
+  - ...
+  display: boolean = true;
+  
+  toggle() {
+    this.display = !this.display;
+  }
+
+2. We are just changing the boolean value "true" to "false" and vice-versa.

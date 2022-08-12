@@ -1,0 +1,14 @@
+1. This Bootstrap is a CSS library/framework. To install BT in AJ we can refer to guide at https://ng-bootstrap.github.io/#/home
+
+2. To install we run cmd:
+  - ng add @ng-bootstrap/ng-bootstrap
+
+3. Then we use our Bootstrap css code. We can its code component from same above website.
+  - ...
+  <p>
+    <ngb-alert [dismissible]="true">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p>
+
+4. Another popular alternative of Bootstrap is MaterialUI.
