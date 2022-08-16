@@ -1,6 +1,6 @@
 1. Modules are fully functional units containing different components. They are next stage in AJ folder structure after component. They make AJ code more modular.
 
-2. A typical Module contains components, services and pips(also called pipes). A Module can many or very few of them their is no limit.
+2. A typical Module contains components, services and pipes. A Module can many or very few of them their is no limit.
 
 3. Generate module:
   - ng generate module 'module-name'
