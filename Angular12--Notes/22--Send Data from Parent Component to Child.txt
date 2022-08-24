@@ -1,0 +1,31 @@
+1. When developing Web Apps, we need to transfer data from parent component to child components. It is essential for managing apps in AJ.
+
+2. Child component is a name for a component which will inherit data from another component. So there is no special process to make such component.
+
+3. Lets consider two main components in our simple app.
+  -- main app component --> app.component.html, app.component.ts
+  -- child component --> child.component.html, child.component.ts
+
+4. First we create data in parent .ts file and pass it into child selector calling.
+  - ...
+  export class AppComponent {
+  datainparent = 15;
+  username = "Pawan";
+
+  - ...
+  <app-child [item]="datainparent" [user]="username"></app-child>
+
+5. Next we need to pass these "data" and bind them in child component .ts file.
+  - ...
+  import { Component, OnInit, Input } from '@angular/core';
+  ...
+  ...
+  export class ChildComponent implements OnInit {
+    @ Input() item = 0;
+    @ Input() user = "Username is here...";
+  }
+
+6. After binding, we can use or access them in Child Component's html file.
+  - ...
+  <p>{{item}}</p>
+  <h3>{{user}}</h3>

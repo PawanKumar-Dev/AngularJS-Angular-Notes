@@ -1,0 +1,32 @@
+1. Two way binding is simple process where we enter data and show that data at same time. It's is easiest to accomplish in AJ by using "ng-model" directive.
+
+2. There are other ways to do two-binding. But this is shortest and easiest.
+
+3. First we must create a variable which is storing our data to be displayed. For our ease we are making it "any".
+  - ...
+  username: any;
+  
+4. Then we create an input which is receiving data and then showed that data back.
+  - ...
+  <input type="text" [(ngModel)]="username">
+
+  <h3>{{username}}</h3>
+
+5. [(ngModel)] we call these brackets "banana in the box". But we will get error right now since we didn't imported the "FormsModule";
+
+6. For importing module, in this we go to our "app.module.ts" file. After importing, we register the module too.
+  - ...
+  import { FormsModule } from '@angular/forms';
+
+  ...
+  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule, FormsModule  //Here we register our module
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }

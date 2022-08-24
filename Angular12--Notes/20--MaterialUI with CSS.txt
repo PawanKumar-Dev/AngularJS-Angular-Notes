@@ -1,4 +1,4 @@
-1. Material UI is  mobile first responsive framework/library. Just like Bootstrap. You can find its guide here: https://material.angular.io/
+1. Material UI is mobile first responsive framework/library. Just like Bootstrap. You can find its guide here: https://material.angular.io/
 
 2. Next we type install cmd:
   - ng add @angular/material

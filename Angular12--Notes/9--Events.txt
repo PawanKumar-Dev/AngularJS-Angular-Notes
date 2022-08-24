@@ -1,4 +1,4 @@
-1. We can all events of JS in AJ. But syntax is different. We use the "banana bracket style".
+1. We can use all events of JS in AJ. But syntax is different. We use the "banana bracket style".
   - <button (click)="getName()">Click Me</button>
 
 2. Remember all logic is defined inside our ".ts" file for these events.

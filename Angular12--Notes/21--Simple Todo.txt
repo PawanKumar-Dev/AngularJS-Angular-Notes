@@ -1,0 +1,30 @@
+1. Example in simple todo list. First build html part
+  - ...
+  <input type="text" placeholder="Enter Task" #task>
+  <button (click)="addTask(task.value)">Add Task</button>
+
+
+2. With addTask() function:
+  - ...
+  todolist: any[] = [];
+
+  addTask(task: string) {
+    this.todolist.push({ id: this.todolist.length, list: task });
+    console.log(this.todolist);
+  }
+
+3. Then publish this list:
+  - ...
+  <ul *ngFor="let item of todolist">
+    <li>
+      {{item.id}}: {{item.list}}
+      <button (click)="removeTask(item.id)">Remove</button>
+    </li>
+  </ul>
+
+4. To remove anything from this list we use filter function.
+  - ...
+  removeTask(id: number) {
+    console.log(id);
+    this.todolist = this.todolist.filter(item => item.id !== id);
+  }

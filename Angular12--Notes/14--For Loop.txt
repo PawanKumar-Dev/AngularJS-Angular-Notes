@@ -1,4 +1,4 @@
-1. For loop in Aj is different from normal JS.
+1. "For loop" in Aj is different and simple from normal JS.
   - ...
   students = ["Pawan", "Raju", "Pankaj", "Ashish"];
 

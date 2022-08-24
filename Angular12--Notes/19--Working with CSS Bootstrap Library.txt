@@ -3,7 +3,7 @@
 2. To install we run cmd:
   - ng add @ng-bootstrap/ng-bootstrap
 
-3. Then we use our Bootstrap css code. We can its code component from same above website.
+3. Then we use our Bootstrap css code. We can copy and use component code from same above website.
   - ...
   <p>
     <ngb-alert [dismissible]="true">

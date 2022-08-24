@@ -1,0 +1,30 @@
+1. Sending data from child component to parent component is considered one of the most important point in AJ. Asked in interview too.
+
+2. First lets create a child component with name "child" in this case.
+  - ng g c child
+
+3. Next we move to parent component ".ts" file and build a function the will receive the data from child component. To simplify we used any data-type.
+  - ...
+  incomingData(data:any) {
+    console.log(data);
+  }
+
+4. Then we call this function and pass to our child component selector. Names "incomingDataEvent" can be anything. But when providing function "incomingData($event)", $event --- is compulsory.
+  - ...
+  <app-child (incomingDataEvent)="incomingData($event)"></app-child>
+
+5. Next we go to child component ".ts" file and import "Output" decorator. Also add "EventEmitter".
+  - ...
+  import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+  ...
+  @Output() incomingDataEvent = new EventEmitter<any>();
+
+6. As seen we declare new EventEmitter and give it "any" data type.
+
+7. Finally we go to child component view and create a simple input element which is sending some data to its parent component.
+  - ...
+  <input type="text" #box>
+  <button (click)="incomingDataEvent.emit(box.value)">Send Data</button>
+
+8. As you can see we don't call our new function directly. But "emit" it instead.
+And you can see whatever we input is being console.log 

@@ -1,0 +1,40 @@
+1. When you know how to pass data from parent component to child component in AJ. We can create truly reusable components. These can be used again and again in your project.
+
+2. To do this we create a child component with name "child".
+
+3. After making sure our child component is working with parent. We go to parent component ".ts" file and create some data that is going to passed into child.
+  - ...
+  children = [
+    { name: "Pawan", number: 888894 },
+    { name: "Raju", number: 456542 },
+    { name: "Akshay", number: 423500 },
+    { name: "Shayam", number: 450042 }
+  ];
+
+4. Next we pass this data into child component.
+  - ...
+  <ul *ngFor="let child of children">
+    <li><app-child [item]="child"></app-child></li>
+  </ul>
+
+5. At this point, we need to go to child components ".ts" file and import our data.
+  - ...
+  import { Component, OnInit, Input } from '@angular/core';
+  ...
+  @Input() item:{name:string, number:number} = {name:"", number:0};
+
+6. Then we access our data in child component's view.
+  - ...
+  <li>{{item.name}}</li>
+  <li>{{item.number}}</li>
+
+7. Now we can even style them in our child component css file
+  li {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: chocolate;
+    color: #fff;
+    margin-left: 10px;
+  }
+
+8. Now we can use this child component anywhere we want this list. It makes this component truly reusable.

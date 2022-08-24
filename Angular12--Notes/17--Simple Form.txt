@@ -24,7 +24,7 @@
 
 5. As you can see, we have to pass an id. #myForm="ngForm" -- this identify our form.
 
-6. Next part (ngSubmit)="getData(myForm.value) is event which takes an id and let determine which form attribute we want to target. Like we wanted the "value".
+6. Next part (ngSubmit)="getData(myForm.value) is event which takes an id and let determine which form attribute we want to target. Like we wanted the "value" of form fields.
 
 7. All input element must have 'ngModel' and 'name' attribute to be able to fetch data.
 
