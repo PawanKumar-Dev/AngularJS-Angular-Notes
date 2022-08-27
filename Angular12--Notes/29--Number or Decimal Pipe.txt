@@ -1,0 +1,5 @@
+1. Number pipe or Decimal pipe is popular pipe used in case of formatting Numbers.https://angular.io/api/common/DecimalPipe
+
+2. Number pipe is popularly asked in interview.
+
+3. 

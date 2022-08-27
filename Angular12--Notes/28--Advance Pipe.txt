@@ -1,0 +1,52 @@
+1. Params in Pipes or parameters in pipes is another concept of AJ. Where we can modify pipes functionality by supplying different parameters.
+
+Note: Not all pipes need Params. But a lot of them do.
+
+2. Lets see our SlicePipe which works with one or two params.
+  - https://angular.io/api/common/SlicePipe
+
+  - ...
+  <h1>{{title|slice:4}}</h1>
+
+  //Result before slice: my-first-project
+  //Result after slice: irst-project
+
+3. As you saw our slice pipe took first param as the number from where our string is sliced. but we can provide 2nd param and determine the end point of string.
+  - ...
+  <h1>{{title|slice:4:9}}</h1>
+
+  //Result before slice: my-first-project
+  //Result after slice: irst-
+
+4. So basically it counted from 4 to 9 and saved only those characters from string. And others were sliced off.
+
+5. Similarly you can and use another pipe in conjunction with first one.
+  - ...
+  <h1>{{title|slice:4:9|uppercase}}</h1>
+
+  - ...
+  //Result: IRST-
+
+6. Another pipe which we use a lot to peek at our JSON data is json-pipe.
+  - ...
+  incomingdata = {
+    name: "Pawan",
+    phone: 8880011100,
+    email: "pk@gmail.com"
+  }
+
+  - ...
+  <h2>{{incomingdata}}</h2>
+
+7. When you try to access normal json data you run into problem that it will show up in view as "[Object object]". Sure we can process with a loop. But to take a peek at data, that a lot of work. That's where our "json" pipe comes in.
+  - ...
+  <h2>{{incomingdata|json}}</h2>
+
+8. Wallah! you have the data printed. And you have your peek at json data.
+
+9. We can also attach currency symbols in front of text where we want with currency pipe.
+  - ...
+  <h2>{{1000|currency:"USD"}}</h2>
+
+  - ...
+  $1,000.00

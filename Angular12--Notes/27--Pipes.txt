@@ -1,0 +1,29 @@
+1. Pipes are piece of code which allow us to transform data in the view part of Angular JS. It helps us format the shown data correctly.
+
+2. For example we can transform lowercase data to uppercase with simple "pipe".
+  - ...
+    <h1>{{title|uppercase}}</h1> or <h1>{{title|lowercase}}</h1>
+
+3. Pipes always work on the view part of AJ. Never in the logic part.
+
+4. Why Pipes because they are simple and doesn't need a lot of coding. You can achieve the same thing with coding yourselves but it is waste of time and code.
+  - ...
+  today = Date();
+
+  - ...
+  {{today}}
+  // Result: Sat Aug 27 2022 22:03:44 GMT+0530 (India Standard Time)
+
+5. Result might be correct but a bit too verbose and complicated. To format this data we can simple use a pipe, without tinkering with code.
+  - ...
+  <h2>{{today|date:'fullDate'}}</h2>
+  // Result: Saturday, August 27, 2022
+
+  - ...
+  <h2>{{today|date:'longDate'}}</h2>
+  // Result: August 27, 2022
+
+6. You can read more about data pipe at this link:
+https://angular.io/api/common/DatePipe
+
+7. You can build your own pipes and can use multiple pipes at same data as well.

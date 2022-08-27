@@ -1,0 +1,14 @@
+1. Template Reference Variable is nothing but the variable or id we use in our input elements to track its different properties.
+
+2. For example
+  - ...
+  getValue(data:any) {
+    console.log(data);    
+  }
+
+  - ...
+  <input type="text" name="user" placeholder="some text" #box>
+  <button (click)="getValue(box.name)">Submit</button>
+
+3. The "#box" we passed into the input html element is our template reference variable.
+With "#box" we can track anything. Input element entered value, its placeholder value or even its "name" attribute value.
